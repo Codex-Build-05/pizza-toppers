@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pizza Toppers — Wood-Fired. Handcrafted. Unforgettable.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark">
+
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">Pizza<span>Toppers</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/919789163364" target="_blank" class="btn-order-nav">Order Now</a>
+    <span class="nav-spacer"></span>
+    <button id="themeToggle" class="nav-theme-btn"><i class="fas fa-moon" id="themeIcon"></i></button>
+    <button class="cart-icon-btn" id="cartIconBtn" aria-label="Cart">
+      <i class="fas fa-shopping-bag"></i>
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <!-- <div class="floating-ingredients">
+    <span class="ingredient ing-1">🍅</span>
+    <span class="ingredient ing-2">🌿</span>
+    <span class="ingredient ing-3">🧀</span>
+  </div> -->
+  <div class="hero-content">
+    <h1><span class="font-italian">Wood-Fired.</span><br/><em>Handcrafted.</em><br/><span class="font-italian">Unforgettable.</span></h1>
+    <p>Italiano pizzas baked in our 900°F stone oven</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-secondary">Explore Menu</a>
+    </div>
+  </div>
+  <!--<div class="steam-bg">
+    <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+    <span class="s4"></span><span class="s5"></span><span class="s6"></span>
+  </div>-->
+</section>
+
+<section id="menu" class="section">
+  <div class="container">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="classic">Classic</button>
+      <button class="tab-btn" data-tab="veg">Veg Special</button>
+      <button class="tab-btn" data-tab="nonveg">Non-Veg</button>
+      <button class="tab-btn" data-tab="signature">Signature</button>
+      <button class="tab-btn" data-tab="burger">Burgers</button>
+    </div>
+
+    <div class="tab-content active" id="tab-classic"></div>
+    <div class="tab-content" id="tab-veg"></div>
+    <div class="tab-content" id="tab-nonveg"></div>
+    <div class="tab-content" id="tab-signature"></div>
+    <div class="tab-content" id="tab-burger"></div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">Our Story</h2>
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Our Kitchen"/>
+      </div>
+      <div class="about-text">
+        <p>Pizza Toppers was born from a single obsession: the perfect wood-fired pizza. Our 900°F stone oven, imported from Naples, chars every base to crispy perfection while keeping the centre soft and airy. Every ingredient is sourced fresh daily — San Marzano tomatoes, buffalo mozzarella, hand-picked basil. This isn't fast food. This is craft.</p>
+      </div>
+    </div>
+    <div class="value-cards">
+      <div class="value-card"><span class="value-icon">🔥</span><h4>900°F Stone Oven</h4></div>
+      <div class="value-card"><span class="value-icon">🌿</span><h4>Fresh Daily Ingredients</h4></div>
+      <div class="value-card"><span class="value-icon">🍕</span><h4>Naples Tradition</h4></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="container">
+    <h2 class="section-title">From Our Kitchen</h2>
+    <!-- Cloudinary: replace Unsplash srcs with Cloudinary URLs later -->
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-index="0"><img id="gimg-0" data-index="0" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80" alt="Gallery 1"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="1"><img id="gimg-1" data-index="1" src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=800&q=80" alt="Gallery 2"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="2"><img id="gimg-2" data-index="2" src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800&q=80" alt="Gallery 3"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="3"><img id="gimg-3" data-index="3" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="Gallery 4"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="4"><img id="gimg-4" data-index="4" src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600&q=80" alt="Gallery 5"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="5"><img id="gimg-5" data-index="5" src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=800&q=80" alt="Gallery 6"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="6"><img id="gimg-6" data-index="6" src="https://images.unsplash.com/photo-1548369937-47519962c11a?w=800&q=80" alt="Gallery 7"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+      <div class="gallery-item" data-index="7"><img id="gimg-7" data-index="7" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Gallery 8"/><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+  <button class="lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt=""/>
+  <button class="lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<section id="testimonials" class="section">
+  <div class="container">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="carousel-wrap">
+      <button class="car-btn car-prev" id="carPrev"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carTrack">
+          <div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Best pizza in the city. The wood-fired crust is absolutely unreal."</p><h4>Rahul M.</h4></div>
+          <div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Truffle Royale changed my life. Worth every rupee."</p><h4>Priya S.</h4></div>
+          <div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Ordered on WhatsApp, delivered hot. Meat Lovers is insane."</p><h4>Arjun K.</h4></div>
+          <div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Paneer Tikka pizza is a masterpiece. Perfectly spiced."</p><h4>Sneha R.</h4></div>
+          <div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"The Inferno lives up to its name. Addictively spicy and delicious."</p><h4>Vikram T.</h4></div>
+        </div>
+      </div>
+      <button class="car-btn car-next" id="carNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="car-dots" id="carDots"></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Find Us &amp; Order</h2>
+    <div class="contact-grid">
+      <div class="contact-form-wrap">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="<!-- WEB3FORMS_KEY_HERE -->"/>
+          <input type="text" name="name" placeholder="Your Name" required/>
+          <input type="tel" name="phone" placeholder="Phone Number" required/>
+          <input type="email" name="email" placeholder="Email Address" required/>
+          <select name="service" required>
+            <option value="" disabled selected>Select Service</option>
+            <option>Dine In</option>
+            <option>Takeaway</option>
+            <option>Bulk Order</option>
+            <option>Catering</option>
+          </select>
+          <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+        <div class="form-msg" id="formMsg"></div>
+      </div>
+      <div class="contact-info">
+        <button onclick="openCart()" class="btn-wa-large"><i class="fas fa-shopping-bag"></i> View Cart &amp; Order</button>
+        <div class="contact-details">
+          <p><i class="fas fa-phone"></i> <a href="tel:+919789163364">+91 9789163364</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:sedhurajan500@gmail.com">sedhurajan500@gmail.com</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Pizza Toppers, N Red Hills Rd, Villivakkam, Chennai, Tamil Nadu 600049</p>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8589.974673260966!2d80.20146734184254!3d13.117583586721421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526466efeefdab%3A0xe8e2dd4bc95236f9!2sPIZZA%20TOPPERS!5e0!3m2!1sen!2sin!4v1790115000214!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo">Pizza<span>Toppers</span></div>
+      <p>Wood-Fired. Handcrafted. Unforgettable.</p>
+    </div>
+    <div class="footer-center">
+      <p>© 2025 Pizza Toppers. All rights reserved.</p>
+      <p>Built by <a href="https://instagram.com/codex_builds" target="_blank">SedhuTech</a></p>
+      <p>DM to Build your Brand's website <a href="https://instagram.com/codex_builds" target="_blank">@codex_builds</a></p>
+    </div>
+    <div class="footer-social">
+      <h5>Follow Us</h5>
+      <div class="social-icons">
+        <a href="https://instagram.com/codex_builds" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919789163364" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom" style="display:none;">
+    <p>© 2025 Pizza Toppers. All rights reserved.</p>
+    <p>Built by <a href="https://instagram.com/codex_builds" target="_blank">SedhuTech</a></p>
+    <p>DM to Build your Brand's website <a href="https://instagram.com/codex_builds" target="_blank">@codex_builds</a></p>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Order</h3>
+    <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body">
+    <div class="cart-empty" id="cartEmpty">
+      <i class="fas fa-shopping-bag"></i>
+      <p>Your cart is empty</p>
+      <span>Add pizzas from the menu</span>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">₹0</span>
+    </div>
+    <a id="cartWhatsapp" href="#" target="_blank" class="btn-wa-large"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+    <button class="cart-clear" id="cartClear">Clear Cart</button>
+  </div>
+</div>
+
+<button id="themeFab" class="theme-fab"><i class="fas fa-moon" id="themeFabIcon"></i></button>
+
+<script src="app.js"></script>
+</body>
+</html>
